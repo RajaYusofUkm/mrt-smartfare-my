@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚇 MRT SmartFare Malaysia
 
-## Getting Started
+> ⚠️ **AMARAN: INI PROJEK TESTING/DEMO SAHAJA**  
+> Projek ini dibuat untuk tujuan pembelajaran dan demo. **BUKAN** aplikasi sebenar dan **TIADA** kaitan dengan RapidKL atau Prasarana Malaysia.
 
-First, run the development server:
+---
+
+## 📋 Tentang Projek
+
+Aplikasi kalkulator tambang MRT/LRT/Monorail Malaysia. Dibina menggunakan:
+- **Next.js 16** - Frontend framework
+- **Supabase** - Backend & Database
+- **Tailwind CSS** - Styling
+
+## ✨ Ciri-Ciri (Demo)
+
+- 🧮 Kira tambang antara stesen
+- 🚉 Sokongan pelbagai mod pengangkutan (MRT, LRT, Monorail)
+- 👥 Diskaun untuk pelajar, warga emas & OKU
+- 🎫 Simulasi pembelian tiket
+- 📊 Dashboard admin
+
+## 🚀 Cara Jalankan
 
 ```bash
+# Install dependencies
+npm install
+
+# Jalankan development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Setup Supabase
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Buat akaun di [supabase.com](https://supabase.com)
+2. Buat projek baru
+3. Jalankan SQL dari `docs/complete_setup.sql`
+4. Salin URL dan Anon Key ke `.env.local`:
 
-## Learn More
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Struktur Fail
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+├── app/
+│   ├── (auth)/          # Login & Signup
+│   ├── admin/           # Admin Dashboard
+│   ├── api/             # API Routes
+│   └── dashboard/       # User Dashboard
+├── components/          # UI Components
+├── docs/                # SQL Scripts
+└── lib/                 # Utilities
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚠️ PENAFIAN PENTING
 
-## Deploy on Vercel
+**INI BUKAN APLIKASI RASMI**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ❌ Harga tambang adalah **ANGGARAN** dan mungkin **TIDAK TEPAT**
+- ❌ Data stesen mungkin **TIDAK LENGKAP** atau **TIDAK TERKINI**
+- ❌ **BUKAN** aplikasi rasmi RapidKL/Prasarana Malaysia
+- ❌ Tiket yang "dibeli" adalah **SIMULASI SAHAJA**
+- ✅ Untuk **RUJUKAN DAN PEMBELAJARAN** sahaja
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+*Dibina untuk tujuan pembelajaran* 🎓
